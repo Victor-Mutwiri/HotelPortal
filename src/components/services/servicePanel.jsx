@@ -3,7 +3,7 @@ import "../../styles/ServicePanel.css";
 
 const navOptions = [
   "Housekeeping",
-  "Order Food",
+  /* "Order Food", */
   "Request Assistance",
   "File Complaint",
   "Feedback",

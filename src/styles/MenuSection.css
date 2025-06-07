@@ -1,0 +1,220 @@
+.menu-section {
+  min-height: 100vh;
+  /* background-color: #f8f9fa; */
+}
+
+.menu-header {
+  /* background-color: #ffffff; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  padding: 1.5rem 0;
+  /* border-bottom: 1px solid #e9ecef; */
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-icon {
+  color: #2e7d32;
+  width: 32px;
+  height: 32px;
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.header-text p {
+  color: #666;
+  margin: 0.5rem 0 0;
+}
+
+.menu-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.menu-main section {
+  margin-bottom: 3rem;
+}
+
+.menu-main h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.packages-grid,
+.dishes-grid,
+.kids-grid,
+.drinks-grid,
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.package-card,
+.dish-card,
+.kids-card,
+.drink-card,
+.offer-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.package-card:hover,
+.dish-card:hover,
+.kids-card:hover,
+.drink-card:hover,
+.offer-card:hover {
+  transform: translateY(-2px);
+}
+
+.category-tag {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #2e7d32;
+  margin: 0.5rem 0;
+}
+
+.description {
+  color: #666;
+  font-size: 0.925rem;
+  line-height: 1.5;
+}
+
+.section-icon {
+  width: 24px;
+  height: 24px;
+  color: #2e7d32;
+}
+
+.preview-button,
+.hide-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  max-width: 600px;
+  width: 90%;
+}
+
+.preview-button:hover,
+.hide-button:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.preview-button:hover .button-icon {
+  transform: translateY(2px);
+}
+
+.hide-button:hover .button-icon {
+  transform: translateY(-2px);
+}
+
+.hide-button {
+  background-color: #666;
+  margin-bottom: 3rem;
+}
+
+.hide-button:hover {
+  background-color: #4a4a4a;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 600px) {
+  .menu-section {
+    min-height: auto;
+  }
+
+  .header-content {
+    padding: 0 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-main {
+    padding: 1rem;
+  }
+
+  .packages-grid,
+  .dishes-grid,
+  .kids-grid,
+  .drinks-grid,
+  .offers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .menu-main h2 {
+    font-size: 1.25rem;
+  }
+
+  .package-card,
+  .dish-card,
+  .kids-card,
+  .drink-card,
+  .offer-card {
+    padding: 1rem;
+  }
+
+  .category-tag {
+    font-size: 0.75rem;
+  }
+
+  .description {
+    font-size: 0.875rem;
+  }
+  .preview-button,
+  .hide-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem auto;
+  }
+}

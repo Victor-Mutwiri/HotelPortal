@@ -45,17 +45,20 @@ const faqs = [
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   const toggleAnswer = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  const visibleFaqs = showAll ? faqs : faqs.slice(0, 3);
 
   return (
     <div className="faq-container">
       <header className="faq-header">
         <div className="faq-header-content">
           <div className="faq-title-section">
-            <h1 className="faq-title">Frequently Asked Questions</h1>
+            <h3 className="faq-title">Frequently Asked Questions</h3>
             <HelpCircle className="icon-large" />
           </div>
           <p className="faq-subtitle">Quick answers to common questions</p>
@@ -64,7 +67,7 @@ const FAQSection = () => {
 
       <main className="faq-main">
         <div className="faq-list">
-          {faqs.map((faq, index) => (
+          {visibleFaqs.map((faq, index) => (
             <div
               key={index}
               className="faq-item"
@@ -92,6 +95,14 @@ const FAQSection = () => {
               )}
             </div>
           ))}
+          {!showAll && (
+            <button
+              className="show-more-btn"
+              onClick={() => setShowAll(true)}
+            >
+              Show All FAQs
+            </button>
+          )}
         </div>
       </main>
     </div>
