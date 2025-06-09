@@ -140,6 +140,9 @@
     gap: 0.5rem;
     padding: 0.5rem;
   }
+  form{
+    width: 250px;
+  }
 
   .nav-button {
     width: 100%;
@@ -164,9 +167,17 @@
     width: 100%;
   }
 
-  select, input, textarea {
+  select{
+    width: 85%;
+    padding: 1rem;
+  }
+  option{
+    padding: auto;
+    font-size: 15px;
+  }
+  input, textarea {
     width: 100%;
-    margin-top: 0.25rem;
+    /* margin-top: 0.25rem; */
   }
 
   button[type="submit"] {

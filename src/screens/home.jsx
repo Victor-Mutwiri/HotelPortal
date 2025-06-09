@@ -8,7 +8,7 @@ import ServicePanel from '../components/services/servicePanel';
 const Home = () => {
     return (
         <main className='home'>
-            <h1>Welcome to Sanvalencia Guest Portal</h1>
+            <h1>Welcome to SanValencia Guest Portal</h1>
             <FAQSection />
             <ServicePanel />
             <MenuSection />
