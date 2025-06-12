@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Housekeeping = ({ onSubmit, loading, error }) => {
+const Housekeeping = ({ onSubmit, loading, error, guestData }) => {
   const [housekeepingOther, setHousekeepingOther] = useState(false);
 
   const handleSubmit = (e) => {
@@ -9,20 +9,31 @@ const Housekeeping = ({ onSubmit, loading, error }) => {
       roomNumber: e.target.roomNumber.value,
       priority: e.target.priority.value,
       description: housekeepingOther ? e.target.description.value : e.target.service.value,
+      guestName: guestData?.name,
+      guestEmail: guestData?.email,
+      guestContact: guestData?.contact,
+      preferredComm: guestData?.preferredComm,
     };
     onSubmit(e, formData);
   };
 
   return (
     <form className="form-section" onSubmit={handleSubmit}>
-      <label>
+      <div className="guest-info-summary">
+        <h3>Guest Information</h3>
+        <p>Name: {guestData?.name}</p>
+        <p>Email: {guestData?.email}</p>
+        <p>Contact: {guestData?.contact}</p>
+        <p>Preferred Communication: {guestData?.preferredComm}</p>
+      </div>
+      {/* <label>
         Room Number:
         <select name="roomNumber" required>
           <option>101</option>
           <option>102</option>
           <option>103</option>
         </select>
-      </label>
+      </label> */}
 
       <label>
         Priority:

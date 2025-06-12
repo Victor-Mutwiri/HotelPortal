@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../../styles/ServicePanel.css";
 import { supabase } from "../../config/supabaseClient";
 import Housekeeping from "./serviceTypes/Housekeeping";
@@ -17,6 +17,14 @@ const ServicePanel = () => {
   const [selected, setSelected] = useState("Housekeeping");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [guestData, setGuestData] = useState(null);
+
+  useEffect(() => {
+    const storedData = localStorage.getItem('guestData');
+    if (storedData) {
+      setGuestData(JSON.parse(storedData));
+    }
+  }, []);
 
   // Simulate a form submission
   const handleSubmit = async (e, formData) => {
@@ -64,6 +72,7 @@ const ServicePanel = () => {
       onSubmit: handleSubmit,
       loading,
       error,
+      guestData
     };
 
     switch (selected) {
