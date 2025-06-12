@@ -149,14 +149,12 @@ const LandingPage = () => {
 
           <div className="privacy-notice">
             <h3>Privacy Notice</h3>
-            <p>
-              We collect this information to:
-              <ul>
-                <li>Provide seamless service during your stay</li>
-                <li>Respond to your inquiries or assistance needs</li>
-                <li>Ensure effective communication for your comfort and safety</li>
-              </ul>
-            </p>
+            <p>We collect this information to:</p>
+            <ul>
+              <li>Provide seamless service during your stay</li>
+              <li>Respond to your inquiries or assistance needs</li>
+              <li>Ensure effective communication for your comfort and safety</li>
+            </ul>
             <p className="important-notice">
               Please ensure all information provided is accurate as it cannot be modified after submission.
               Incorrect information may prevent us from addressing your inquiries or providing assistance.

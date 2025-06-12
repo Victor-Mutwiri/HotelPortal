@@ -38,9 +38,12 @@ const ServicePanel = () => {
       
       // Create base insert data
       const insertData = {
-        room_number: formData.roomNumber,
         description: formData.description,
         created_at: new Date(),
+        guestName: formData.guestName,
+        guestEmail: formData.guestEmail,
+        guestContact: formData.guestContact,
+        preferredComm: formData.preferredComm
       };
 
       // Add additional fields based on service type
