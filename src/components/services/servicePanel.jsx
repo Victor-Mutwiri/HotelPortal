@@ -60,7 +60,7 @@ const ServicePanel = () => {
 
       if (supabaseError) throw supabaseError;
 
-      alert('Request submitted successfully!');
+      alert(' Submitted successfully!');
       e.target.reset();
     } catch (err) {
       setError('Failed to submit request. Please try again.');
