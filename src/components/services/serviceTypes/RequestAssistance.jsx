@@ -24,7 +24,7 @@ const RequestAssistance = ({ onSubmit, loading, error, guestData }) => {
 
       <label>
         Reason:
-        <input type="text" name="reason" required />
+        <input type="text" name="description" required />
       </label>
 
       <label>
