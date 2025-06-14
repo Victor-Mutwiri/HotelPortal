@@ -35,26 +35,37 @@ const ServicePanel = () => {
     try {
       // Convert service name to table name format
       const tableName = selected.toLowerCase().replace(' ', '_');
-      
-      // Create base insert data
-      const insertData = {
+      let insertData = {
         description: formData.description,
-        created_at: new Date(),
+        created_at: new Date().toISOString(),
         guestName: formData.guestName,
         guestEmail: formData.guestEmail,
         guestContact: formData.guestContact,
         preferredComm: formData.preferredComm
       };
 
-      // Add additional fields based on service type
-      if (tableName !== 'feedback') {
-        insertData.status = 'pending';
-        if (tableName !== 'file_complaint') {
-          insertData.priority = formData.priority;
-        }
+      // Only add status and priority for specific services
+      switch (tableName) {
+        case 'housekeeping':
+        case 'request_assistance':
+          insertData = {
+            ...insertData,
+            status: 'pending',
+            priority: formData.priority
+          };
+          break;
+        case 'file_complaint':
+          insertData = {
+            ...insertData,
+            status: 'pending'
+          };
+          break;
+        case 'feedback':
+          // Feedback doesn't need status or priority
+          break;
       }
 
-      const { data, error: supabaseError } = await supabase
+      const { error: supabaseError } = await supabase
         .from(tableName)
         .insert([insertData]);
 

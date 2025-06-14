@@ -3,7 +3,7 @@ const RequestAssistance = ({ onSubmit, loading, error, guestData }) => {
     e.preventDefault();
     const formData = {
       priority: e.target.priority.value,
-      description: e.target.reason.value,
+      description: e.target.description.value,
       guestName: guestData?.name,
       guestEmail: guestData?.email,
       guestContact: guestData?.contact,
@@ -14,17 +14,13 @@ const RequestAssistance = ({ onSubmit, loading, error, guestData }) => {
 
   return (
     <form className="form-section" onSubmit={handleSubmit}>
-      {/* <div className="guest-info-summary">
-        <h3>Guest Information</h3>
-        <p>Name: {guestData?.name}</p>
-        <p>Email: {guestData?.email}</p>
-        <p>Contact: {guestData?.contact}</p>
-        <p>Preferred Communication: {guestData?.preferredComm}</p>
-      </div> */}
-
       <label>
-        Reason:
-        <input type="text" name="description" required />
+        Description:
+        <input
+          type="text"
+          name="description"
+          placeholder="Please describe what you need assistance with..."
+          required />
       </label>
 
       <label>

@@ -14,15 +14,6 @@ const FileComplaint = ({ onSubmit, loading, error, guestData }) => {
 
   return (
     <form className="form-section" onSubmit={handleSubmit}>
-      {/* <div className="guest-info-summary">
-        <h3>Guest Information</h3>
-        <p>Name: {guestData?.name}</p>
-        <p>Email: {guestData?.email}</p>
-        <p>Contact: {guestData?.contact}</p>
-        <p>Preferred Communication: {guestData?.preferredComm}</p>
-      </div> */}
-      
-
       <label>
         Describe your complaint:
         <textarea 
