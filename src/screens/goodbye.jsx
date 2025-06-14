@@ -15,7 +15,7 @@ const Goodbye = () => {
 
     return (
         <div className="goodbye-container">
-                <h1>Thank You for Choosing SanValencia!</h1>
+                <h1>Thank You for Choosing Sharlot Homes!</h1>
                 <div className="farewell-message">
                     <p>We hope you had a wonderful stay with us.</p>
                     <p>Your comfort and satisfaction have been our priority.</p>

@@ -1,19 +1,11 @@
 .landing-container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #f8f9fa;
-}
-
-.form-wrapper {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  width: 100%;
 }
 
 h1 {
@@ -30,14 +22,20 @@ h1 {
 .guest-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+.guest-form input {
+  max-width: 850px;
+}
+.guest-form select {
+  max-width: 850px;
 }
 
-.form-group {
+/* .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
+} */
 
 label {
   font-weight: 500;
@@ -64,20 +62,21 @@ input:focus {
 }
 
 .privacy-notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #f8f9fa;
-  padding: 1.5rem;
   border-radius: 4px;
   margin: 1rem 0;
 }
 
 .privacy-notice h3 {
   color: #2c3e50;
-  margin-bottom: 1rem;
 }
 
 .privacy-notice ul {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .important-notice {
@@ -138,18 +137,18 @@ option:first-child {
 /* Mobile Responsive Styles */
 @media (max-width: 600px) {
   .landing-container {
-    padding: 1rem;
+    padding: 0.7rem; 
   }
 
   .form-wrapper {
-    padding: 1.5rem;
+    width: 100%;
+    /* padding: 1.5rem; */
+  }
+  .guest-form input{
+    max-width: 300px;
   }
 
-  h1 {
+  .form-wrapper h1 {
     font-size: 1.5rem;
-  }
-
-  .privacy-notice {
-    padding: 1rem;
   }
 }

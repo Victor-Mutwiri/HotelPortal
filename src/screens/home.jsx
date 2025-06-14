@@ -27,7 +27,7 @@ const Home = () => {
     }, [navigate]);
     return (
         <main className='home'>
-            <h1>Welcome to SanValencia Guest Portal</h1>
+            <h1>Welcome to Sharlot Homes Guest Portal</h1>
             <FAQSection />
             <ServicePanel />
             {/* <MenuSection /> */}
