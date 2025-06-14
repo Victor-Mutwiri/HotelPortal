@@ -13,12 +13,12 @@ const Feedback = ({ onSubmit, loading, error, guestData }) => {
 
   return (
     <form className="form-section" onSubmit={handleSubmit}>
-
       <label>
         Your feedback:
         <textarea 
           name="feedback"
           rows="4"
+          autosize='false'
           placeholder="Please share your experience with us..."
           required
         ></textarea>
