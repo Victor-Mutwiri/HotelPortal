@@ -1,15 +1,8 @@
-/* FAQSection.css */
-
 .faq-container {
-  min-height: 100vh;
-  /* background-color: #f9fafb; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 .faq-header {
-  /* background-color: white; */
-  /* border-bottom: 1px solid #e5e7eb; */
-  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); */
   position: sticky;
   top: 0;
   z-index: 10;

@@ -115,6 +115,7 @@ const ServicePanel = () => {
             key={option}
             onClick={() => setSelected(option)}
             className={`nav-button ${selected === option ? "active" : ""}`}
+            data-service={option}
           >
             {option}
           </button>

@@ -11,8 +11,8 @@ const Home = () => {
             <h1>Welcome to SanValencia Guest Portal</h1>
             <FAQSection />
             <ServicePanel />
-            <MenuSection />
-            <RecommendationsSection />
+            {/* <MenuSection /> */}
+            {/* <RecommendationsSection /> */}
         </main>
     );
 }
