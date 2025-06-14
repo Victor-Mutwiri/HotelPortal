@@ -1,0 +1,156 @@
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.checkout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #ff4b4b 0%, #ff7676 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 75, 75, 0.2);
+}
+
+.checkout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 75, 75, 0.3);
+}
+
+.checkout-icon {
+    font-size: 1.3rem;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+.modal-content h2 {
+    color: #ff4b4b;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.checkout-date {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.warning {
+    color: #666;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.confirm-btn, .cancel-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.confirm-btn {
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+}
+
+.confirm-btn:hover {
+    background-color: #ff3333;
+}
+
+.cancel-btn {
+    background-color: #f8f9fa;
+    color: #666;
+    border: 1px solid #dee2e6;
+}
+
+.cancel-btn:hover {
+    background-color: #e9ecef;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 600px) {
+    .checkout-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .checkout-date {
+        font-size: 1.1rem;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .confirm-btn, .cancel-btn {
+        width: 100%;
+        padding: 1rem;
+    }
+}

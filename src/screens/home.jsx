@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/home.css';
 import FAQSection from '../components/sections/faqSections';
+import EarlyCheckout from '../components/sections/checkout';
 import MenuSection from '../components/sections/menuSections';
 import RecommendationsSection from '../components/sections/recommendationsSection';
 import ServicePanel from '../components/services/servicePanel';
@@ -32,6 +33,7 @@ const Home = () => {
             <ServicePanel />
             {/* <MenuSection /> */}
             {/* <RecommendationsSection /> */}
+            <EarlyCheckout />
         </main>
     );
 }
